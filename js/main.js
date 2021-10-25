@@ -2,20 +2,29 @@
 const mainBox = document.querySelector('.main-box')
 
     for (let i = 1; i <= 100; i++){
+        let content = '';
+        let className = '';
         
         if (i % 3 == 0 && i % 5 ==0) {
-            mainBox.innerHTML += `<div class="box red" >fizzbuzz</div>`;
+            content = "fizbuzz";
+            className = "red";
         }
 
         else if (i % 3 == 0) {
-            mainBox.innerHTML += `<div class="box green" >fizz</div>`;
+
+            content = "fizz";
+            className ="green";
         }
 
         else if (i % 5 ==0) {
-            mainBox.innerHTML += `<div class="box yellow" >buzz</div>`;
+
+            content = "fizbuzz";
+            className = "yellow";
         }
 
         else{
-            mainBox.innerHTML += `<div class="box" >${i}</div>`;
+            content = i;
+            className = "box";
         }
+        mainBox.innerHTML += `<div class="box ${className}">${content}</div>`;
     }
